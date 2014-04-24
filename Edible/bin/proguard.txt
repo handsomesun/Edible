@@ -1,0 +1,21 @@
+# view AndroidManifest.xml #generated:61
+-keep class com.edible.main.DetailInfo { <init>(...); }
+
+# view AndroidManifest.xml #generated:53
+-keep class com.edible.main.WelcomeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:37
+-keep class com.edible.ocr.CaptureActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:46
+-keep class com.edible.ocr.HelpActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:60
+-keep class com.edible.ocr.PreferencesActivity { <init>(...); }
+
+# view res/layout/capture.xml #generated:27
+-keep class com.edible.ocr.ViewfinderView { <init>(...); }
+
+# view res/layout/capture.xml #generated:201
+-keep class com.edible.ocr.camera.ShutterButton { <init>(...); }
+

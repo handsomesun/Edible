@@ -1,0 +1,579 @@
+com.edible.ocr.BeepManager:
+    private static final float BEEP_VOLUME
+com.edible.ocr.BuildConfig
+com.edible.ocr.CaptureActivity:
+    private static final java.lang.String KEY
+    public static final java.lang.String DEFAULT_SOURCE_LANGUAGE_CODE
+    public static final java.lang.String DEFAULT_TARGET_LANGUAGE_CODE
+    public static final java.lang.String DEFAULT_TRANSLATOR
+    public static final java.lang.String DEFAULT_OCR_ENGINE_MODE
+    public static final java.lang.String DEFAULT_PAGE_SEGMENTATION_MODE
+    public static final boolean DEFAULT_TOGGLE_AUTO_FOCUS
+    public static final boolean DEFAULT_DISABLE_CONTINUOUS_FOCUS
+    public static final boolean DEFAULT_TOGGLE_BEEP
+    public static final boolean DEFAULT_TOGGLE_CONTINUOUS
+    public static final boolean DEFAULT_TOGGLE_REVERSED_IMAGE
+    public static final boolean DEFAULT_TOGGLE_TRANSLATION
+    public static final boolean DEFAULT_TOGGLE_LIGHT
+    private static final boolean CONTINUOUS_DISPLAY_RECOGNIZED_TEXT
+    private static final boolean CONTINUOUS_DISPLAY_METADATA
+    private static final boolean DISPLAY_SHUTTER_BUTTON
+    static final java.lang.String DOWNLOAD_BASE
+    static final java.lang.String OSD_FILENAME
+    static final java.lang.String OSD_FILENAME_BASE
+    static final int MINIMUM_MEAN_CONFIDENCE
+    private static final int SETTINGS_ID
+    private static final int ABOUT_ID
+    private static final int OPTIONS_COPY_RECOGNIZED_TEXT_ID
+    private static final int OPTIONS_COPY_TRANSLATED_TEXT_ID
+    private static final int OPTIONS_SHARE_RECOGNIZED_TEXT_ID
+    private static final int OPTIONS_SHARE_TRANSLATED_TEXT_ID
+    public static final java.lang.String SERVER_IP
+    public static final int PORT
+    1101:1101:static boolean getFirstLaunch()
+    1344:1349:public boolean isConnected()
+com.edible.ocr.DetailInfo:
+    public static final java.lang.String IP_ADDR
+    public static final int PORT
+    protected static final int MSG_SUCCESS
+    protected static final int MSG_FAILURE
+com.edible.ocr.Global:
+    public static final int GET_RESULT_REQUEST
+    3:3:public Global()
+com.edible.ocr.HelpActivity:
+    public static final java.lang.String REQUESTED_PAGE_KEY
+    public static final java.lang.String DEFAULT_PAGE
+    public static final java.lang.String ABOUT_PAGE
+    public static final java.lang.String TERMS_PAGE
+    public static final java.lang.String WHATS_NEW_PAGE
+    private static final java.lang.String BASE_URL
+    private static final java.lang.String WEBVIEW_STATE_PRESENT
+com.edible.ocr.LuminanceSource:
+    public abstract byte[] getRow(int,byte[])
+    public abstract byte[] getMatrix()
+    80:80:public boolean isCropSupported()
+    94:94:public com.edible.ocr.LuminanceSource crop(int,int,int,int)
+    101:101:public boolean isRotateSupported()
+    110:110:public com.edible.ocr.LuminanceSource rotateCounterClockwise()
+com.edible.ocr.OcrCharacterHelper:
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_AFRIKAANS
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_ALBANIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_ARABIC
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_AZERI
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_BASQUE
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_BELARUSIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_BENGALI
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_BULGARIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_CATALAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_CHINESE_SIMPLIFIED
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_CHINESE_TRADITIONAL
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_CROATIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_CZECH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_DANISH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_DUTCH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_ENGLISH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_ESTONIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_FINNISH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_FRENCH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_GALICIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_GERMAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_GREEK
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_HEBREW
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_HINDI
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_HUNGARIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_ICELANDIC
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_INDONESIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_ITALIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_JAPANESE
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_KANNADA
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_KOREAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_LATVIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_LITHUANIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_MACEDONIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_MALAY
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_MALAYALAM
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_MALTESE
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_NORWEGIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_POLISH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_PORTUGUESE
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_ROMANIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_RUSSIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_SERBIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_SLOVAK
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_SLOVENIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_SPANISH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_SWAHILI
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_SWEDISH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_TAGALOG
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_TAMIL
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_TELUGU
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_THAI
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_TURKISH
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_UKRAINIAN
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST_VIETNAMESE
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_AFRIKAANS
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_ALBANIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_ARABIC
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_AZERI
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_BASQUE
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_BELARUSIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_BENGALI
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_BULGARIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_CATALAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_CHINESE_SIMPLIFIED
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_CHINESE_TRADITIONAL
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_CROATIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_CZECH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_DANISH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_DUTCH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_ENGLISH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_ESTONIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_FINNISH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_FRENCH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_GALICIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_GERMAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_GREEK
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_HEBREW
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_HINDI
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_HUNGARIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_ICELANDIC
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_INDONESIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_ITALIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_JAPANESE
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_KANNADA
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_KOREAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_LATVIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_LITHUANIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_MACEDONIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_MALAY
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_MALAYALAM
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_MALTESE
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_NORWEGIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_POLISH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_PORTUGUESE
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_ROMANIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_RUSSIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_SERBIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_SLOVAK
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_SLOVENIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_SPANISH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_SWAHILI
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_SWEDISH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_TAGALOG
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_TAMIL
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_TELUGU
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_THAI
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_TURKISH
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_UKRAINIAN
+    public static final java.lang.String KEY_CHARACTER_WHITELIST_VIETNAMESE
+    136:136:private OcrCharacterHelper()
+com.edible.ocr.OcrResult:
+    48:71:public OcrResult(android.graphics.Bitmap,java.lang.String,int[],int,java.util.List,java.util.List,java.util.List,java.util.List,java.util.List,long)
+    149:149:public long getTimestamp()
+    189:190:public void setCharacterBoundingBoxes(java.util.List)
+com.edible.ocr.OcrResultFailure:
+    35:35:public long getTimestamp()
+com.edible.ocr.OcrResultText:
+    59:59:public java.lang.String getText()
+    67:67:public int[] getWordConfidences()
+    71:71:public int getMeanConfidence()
+    75:75:public java.util.List getRegionBoundingBoxes()
+    83:83:public java.util.List getStripBoundingBoxes()
+    91:91:public java.util.List getCharacterBoundingBoxes()
+com.edible.ocr.PlanarYUVLuminanceSource:
+    65:74:public byte[] getRow(int,byte[])
+    79:105:public byte[] getMatrix()
+    110:110:public boolean isCropSupported()
+    115:115:public com.edible.ocr.LuminanceSource crop(int,int,int,int)
+com.edible.ocr.PreferencesActivity:
+    public static final java.lang.String KEY_SOURCE_LANGUAGE_PREFERENCE
+    public static final java.lang.String KEY_TARGET_LANGUAGE_PREFERENCE
+    public static final java.lang.String KEY_TOGGLE_TRANSLATION
+    public static final java.lang.String KEY_CONTINUOUS_PREVIEW
+    public static final java.lang.String KEY_PAGE_SEGMENTATION_MODE
+    public static final java.lang.String KEY_OCR_ENGINE_MODE
+    public static final java.lang.String KEY_CHARACTER_BLACKLIST
+    public static final java.lang.String KEY_CHARACTER_WHITELIST
+    public static final java.lang.String KEY_TOGGLE_LIGHT
+    public static final java.lang.String KEY_TRANSLATOR
+    public static final java.lang.String KEY_AUTO_FOCUS
+    public static final java.lang.String KEY_DISABLE_CONTINUOUS_FOCUS
+    public static final java.lang.String KEY_HELP_VERSION_SHOWN
+    public static final java.lang.String KEY_NOT_OUR_RESULTS_SHOWN
+    public static final java.lang.String KEY_REVERSE_IMAGE
+    public static final java.lang.String KEY_PLAY_BEEP
+    public static final java.lang.String KEY_VIBRATE
+    public static final java.lang.String TRANSLATOR_BING
+    public static final java.lang.String TRANSLATOR_GOOGLE
+com.edible.ocr.R
+com.edible.ocr.R$array
+com.edible.ocr.R$attr
+com.edible.ocr.R$color
+com.edible.ocr.R$drawable
+com.edible.ocr.R$id
+com.edible.ocr.R$layout
+com.edible.ocr.R$raw
+com.edible.ocr.R$string
+com.edible.ocr.R$styleable
+com.edible.ocr.R$xml
+com.edible.ocr.ViewfinderView:
+    static final boolean DRAW_REGION_BOXES
+    static final boolean DRAW_TEXTLINE_BOXES
+    static final boolean DRAW_STRIP_BOXES
+    static final boolean DRAW_WORD_BOXES
+    static final boolean DRAW_TRANSPARENT_WORD_BACKGROUNDS
+    static final boolean DRAW_CHARACTER_BOXES
+    static final boolean DRAW_WORD_TEXT
+    static final boolean DRAW_CHARACTER_TEXT
+    private java.lang.String[] words
+    private java.util.List regionBoundingBoxes
+    private java.util.List stripBoundingBoxes
+    private java.util.List characterBoundingBoxes
+com.edible.ocr.camera.AutoFocusManager:
+    private static final long AUTO_FOCUS_INTERVAL_MS
+com.edible.ocr.camera.CameraConfigurationManager:
+    private static final java.lang.String TAG
+    private static final int MIN_PREVIEW_PIXELS
+    private static final int MAX_PREVIEW_PIXELS
+    131:141:void setTorch(android.hardware.Camera,boolean)
+com.edible.ocr.camera.CameraManager:
+    private static final int MIN_FRAME_WIDTH
+    private static final int MIN_FRAME_HEIGHT
+    private static final int MAX_FRAME_WIDTH
+    private static final int MAX_FRAME_HEIGHT
+com.edible.ocr.language.LanguageCodeHelper:
+    public static final java.lang.String TAG
+    34:35:private LanguageCodeHelper()
+com.edible.ocr.language.Translator:
+    public static final java.lang.String BAD_TRANSLATION_MSG
+    33:35:private Translator(android.app.Activity)
+com.edible.ocr.language.TranslatorBing:
+    private static final java.lang.String CLIENT_ID
+    private static final java.lang.String CLIENT_SECRET
+com.edible.ocr.language.TranslatorGoogle:
+    private static final java.lang.String API_KEY
+com.google.api.Files
+com.google.api.GoogleAPI:
+    protected static final java.lang.String ENCODING
+    116:142:protected static org.json.JSONObject retrieveJSON(java.net.URL,java.lang.String)
+com.google.api.GoogleAPIException:
+    private static final long serialVersionUID
+    17:18:public GoogleAPIException(java.lang.String)
+com.google.api.translate.Translate:
+    public abstract java.lang.String[] execute(java.lang.String[],com.google.api.translate.Language,com.google.api.translate.Language)
+    public abstract java.lang.String[] execute(java.lang.String,com.google.api.translate.Language,com.google.api.translate.Language[])
+    public abstract java.lang.String[] execute(java.lang.String[],com.google.api.translate.Language[],com.google.api.translate.Language[])
+com.google.api.translate.TranslateV1
+com.google.api.translate.TranslateV2:
+    private static final java.lang.String URL_TEMPLATE
+    78:90:public java.lang.String[] execute(java.lang.String[],com.google.api.translate.Language,com.google.api.translate.Language)
+    100:112:public java.lang.String[] execute(java.lang.String,com.google.api.translate.Language,com.google.api.translate.Language[])
+    122:140:public java.lang.String[] execute(java.lang.String[],com.google.api.translate.Language[],com.google.api.translate.Language[])
+com.googlecode.leptonica.android.AdaptiveMap
+com.googlecode.leptonica.android.Binarize
+com.googlecode.leptonica.android.Box
+com.googlecode.leptonica.android.Constants
+com.googlecode.leptonica.android.Convert
+com.googlecode.leptonica.android.Enhance
+com.googlecode.leptonica.android.JpegIO
+com.googlecode.leptonica.android.Pix:
+    public static final int INDEX_W
+    public static final int INDEX_H
+    public static final int INDEX_D
+    57:67:public Pix(int,int,int)
+    86:94:public byte[] getData()
+    104:110:public int[] getDimensions()
+    121:121:public boolean getDimensions(int[])
+    148:154:public com.googlecode.leptonica.android.Pix copy()
+    163:163:public boolean invert()
+    195:201:public static com.googlecode.leptonica.android.Pix createFromPix(byte[],int,int,int)
+    210:213:public android.graphics.Rect getRect()
+    222:222:public int getWidth()
+    231:231:public int getHeight()
+    240:240:public int getDepth()
+    253:259:public int getPixel(int,int)
+    272:279:public void setPixel(int,int,int)
+    private static native int nativeCreatePix(int,int,int)
+    private static native int nativeCreateFromData(byte[],int,int,int)
+    private static native boolean nativeGetData(int,byte[])
+    private static native int nativeGetDataSize(int)
+    private static native int nativeCopy(int)
+    private static native boolean nativeInvert(int)
+    private static native boolean nativeGetDimensions(int,int[])
+    private static native int nativeGetWidth(int)
+    private static native int nativeGetHeight(int)
+    private static native int nativeGetDepth(int)
+    private static native int nativeGetPixel(int,int,int)
+    private static native void nativeSetPixel(int,int,int,int)
+com.googlecode.leptonica.android.Pixa:
+    55:55:public static com.googlecode.leptonica.android.Pixa createPixa(int)
+    71:77:public static com.googlecode.leptonica.android.Pixa createPixa(int,int,int)
+    100:100:public int getNativePixa()
+    110:116:public com.googlecode.leptonica.android.Pixa copy()
+    130:136:public com.googlecode.leptonica.android.Pixa sort(int,int)
+    178:178:public boolean join(com.googlecode.leptonica.android.Pixa)
+    189:190:public void addPix(com.googlecode.leptonica.android.Pix,int)
+    200:201:public void addBox(com.googlecode.leptonica.android.Box,int)
+    212:213:public void add(com.googlecode.leptonica.android.Pix,com.googlecode.leptonica.android.Box,int)
+    222:228:public com.googlecode.leptonica.android.Box getBox(int)
+    255:255:public int getWidth()
+    266:266:public int getHeight()
+    276:276:public android.graphics.Rect getRect()
+    286:299:public android.graphics.Rect getBoxRect(int)
+    310:316:public int[] getBoxGeometry(int)
+    364:365:public void replacePix(int,com.googlecode.leptonica.android.Pix,com.googlecode.leptonica.android.Box)
+    376:377:public void mergeAndReplacePix(int,int)
+    387:387:public boolean writeToFileRandomCmap(java.io.File)
+    private static native int nativeCreate(int)
+    private static native int nativeCopy(int)
+    private static native int nativeSort(int,int,int)
+    private static native boolean nativeJoin(int,int)
+    private static native void nativeAddPix(int,int,int)
+    private static native void nativeAddBox(int,int,int)
+    private static native void nativeAdd(int,int,int,int)
+    private static native boolean nativeWriteToFileRandomCmap(int,java.lang.String,int,int)
+    private static native void nativeReplacePix(int,int,int,int)
+    private static native void nativeMergeAndReplacePix(int,int,int)
+    private static native int nativeGetBox(int,int)
+com.googlecode.leptonica.android.ReadFile:
+    29:29:public ReadFile()
+    42:54:public static com.googlecode.leptonica.android.Pix readMem(byte[])
+    66:80:public static com.googlecode.leptonica.android.Pix readBytes8(byte[],int,int)
+    94:109:public static boolean replaceBytes8(com.googlecode.leptonica.android.Pix,byte[],int,int)
+    121:129:public static com.googlecode.leptonica.android.Pixa readFiles(java.io.File,java.lang.String)
+    140:155:public static com.googlecode.leptonica.android.Pix readFile(java.io.File)
+    private static native int nativeReadMem(byte[],int)
+    private static native int nativeReadBytes8(byte[],int,int)
+    private static native boolean nativeReplaceBytes8(int,byte[],int,int)
+    private static native int nativeReadFiles(java.lang.String,java.lang.String)
+    private static native int nativeReadFile(java.lang.String)
+com.googlecode.leptonica.android.Rotate
+com.googlecode.leptonica.android.Scale
+com.googlecode.leptonica.android.Scale$ScaleType
+com.googlecode.leptonica.android.Skew
+com.googlecode.leptonica.android.WriteFile
+com.googlecode.tesseract.android.PageIterator
+com.googlecode.tesseract.android.ResultIterator
+com.googlecode.tesseract.android.TessBaseAPI:
+    public static final java.lang.String VAR_CHAR_WHITELIST
+    public static final java.lang.String VAR_CHAR_BLACKLIST
+    public static final int OEM_TESSERACT_ONLY
+    public static final int OEM_CUBE_ONLY
+    public static final int OEM_TESSERACT_CUBE_COMBINED
+    public static final int OEM_DEFAULT
+    208:217:public boolean init(java.lang.String,java.lang.String)
+    253:253:public java.lang.String getInitLanguagesAsString()
+    312:313:public void setDebug(boolean)
+    323:324:public void setRectangle(android.graphics.Rect)
+    337:338:public void setRectangle(int,int,int,int)
+    346:353:public void setImage(java.io.File)
+    363:370:public void setImage(android.graphics.Bitmap)
+    397:398:public void setImage(byte[],int,int,int,int)
+    480:486:public com.googlecode.tesseract.android.ResultIterator getResultIterator()
+    497:497:public java.lang.String getHOCRText(int)
+    507:508:public void setInputName(java.lang.String)
+    516:517:public void setOutputName(java.lang.String)
+    526:527:public void ReadConfigFile(java.lang.String)
+    536:536:public java.lang.String getBoxText(int)
+    private native void nativeFinalize()
+    private native boolean nativeInit(java.lang.String,java.lang.String)
+    private native java.lang.String nativeGetInitLanguagesAsString()
+    private native void nativeSetImageBytes(byte[],int,int,int,int)
+    private native void nativeSetRectangle(int,int,int,int)
+    private native void nativeSetDebug(boolean)
+    private native int nativeGetResultIterator()
+    private native java.lang.String nativeGetBoxText(int)
+    private native java.lang.String nativeGetHOCRText(int)
+    private native void nativeSetInputName(java.lang.String)
+    private native void nativeSetOutputName(java.lang.String)
+    private native void nativeReadConfigFile(java.lang.String)
+com.googlecode.tesseract.android.TessBaseAPI$PageIteratorLevel
+com.googlecode.tesseract.android.TessBaseAPI$PageSegMode
+com.memetix.mst.MicrosoftTranslatorAPI:
+    protected static final java.lang.String ENCODING
+    protected static final java.lang.String PARAM_APP_ID
+    protected static final java.lang.String PARAM_TO_LANG
+    protected static final java.lang.String PARAM_FROM_LANG
+    protected static final java.lang.String PARAM_TEXT_SINGLE
+    protected static final java.lang.String PARAM_TEXT_ARRAY
+    protected static final java.lang.String PARAM_SPOKEN_LANGUAGE
+    protected static final java.lang.String PARAM_SENTENCES_LANGUAGE
+    protected static final java.lang.String PARAM_LOCALE
+    protected static final java.lang.String PARAM_LANGUAGE_CODES
+    58:58:public MicrosoftTranslatorAPI()
+    88:89:public static void setKey(java.lang.String)
+    116:117:public static void setHttpReferrer(java.lang.String)
+    214:217:protected static java.lang.String[] retrieveStringArr(java.net.URL,java.lang.String)
+    232:232:protected static java.lang.String[] retrieveStringArr(java.net.URL)
+    244:247:protected static java.lang.Integer[] retrieveIntArray(java.net.URL)
+    252:259:private static java.lang.Integer[] jsonToIntArr(java.lang.String)
+    270:285:private static java.lang.String[] jsonToStringArr(java.lang.String,java.lang.String)
+    325:339:protected static java.lang.String buildStringArrayParam(java.lang.Object[])
+com.memetix.mst.detect.Detect
+com.memetix.mst.language.Language:
+    111:112:public static void setKey(java.lang.String)
+    115:116:public static void setClientId(java.lang.String)
+    118:119:public static void setClientSecret(java.lang.String)
+    137:156:public java.lang.String getName(com.memetix.mst.language.Language)
+    160:161:public static java.util.List getLanguageCodesForTranslation()
+    179:186:public static java.util.Map values(com.memetix.mst.language.Language)
+    191:192:private void flushCache()
+    196:198:public static void flushNameCache()
+com.memetix.mst.language.Language$GetLanguagesForTranslateService
+com.memetix.mst.language.Language$LanguageService
+com.memetix.mst.language.SpokenDialect
+com.memetix.mst.language.SpokenDialect$SpokenDialectService
+com.memetix.mst.sentence.BreakSentences
+com.memetix.mst.speak.Speak
+com.memetix.mst.translate.Translate:
+    private static final java.lang.String SERVICE_URL
+    private static final java.lang.String ARRAY_SERVICE_URL
+    private static final java.lang.String ARRAY_JSON_OBJECT_PROPERTY
+    40:40:private Translate()
+    76:76:public static java.lang.String execute(java.lang.String,com.memetix.mst.language.Language)
+    93:102:public static java.lang.String[] execute(java.lang.String[],com.memetix.mst.language.Language,com.memetix.mst.language.Language)
+    121:121:public static java.lang.String[] execute(java.lang.String[],com.memetix.mst.language.Language)
+    125:133:private static void validateServiceState(java.lang.String[])
+com.tecnick.htmlutils.htmlentities.HTMLEntities:
+    291:293:public HTMLEntities()
+    314:314:public static java.lang.Object[][] getEntitiesTable()
+    325:348:public static java.lang.String htmlentities(java.lang.String)
+    413:417:public static java.lang.String htmlSingleQuotes(java.lang.String)
+    427:427:public static java.lang.String unhtmlSingleQuotes(java.lang.String)
+    437:440:public static java.lang.String htmlDoubleQuotes(java.lang.String)
+    450:450:public static java.lang.String unhtmlDoubleQuotes(java.lang.String)
+    460:462:public static java.lang.String htmlQuotes(java.lang.String)
+    472:474:public static java.lang.String unhtmlQuotes(java.lang.String)
+    484:486:public static java.lang.String htmlAngleBrackets(java.lang.String)
+    496:498:public static java.lang.String unhtmlAngleBrackets(java.lang.String)
+    508:508:public static java.lang.String htmlAmpersand(java.lang.String)
+    518:518:public static java.lang.String unhtmlAmpersand(java.lang.String)
+org.json.simple.ItemList
+org.json.simple.JSONArray:
+    private static final long serialVersionUID
+    public static void writeJSONString(java.util.List,java.io.Writer)
+    public void writeJSONString(java.io.Writer)
+org.json.simple.JSONObject:
+    private static final long serialVersionUID
+    public static void writeJSONString(java.util.Map,java.io.Writer)
+    public void writeJSONString(java.io.Writer)
+    public static java.lang.String toString(java.lang.String,java.lang.Object)
+    public static java.lang.String escape(java.lang.String)
+org.json.simple.JSONStreamAware
+org.json.simple.JSONValue:
+    public JSONValue()
+    public static java.lang.Object parseWithException(java.io.Reader)
+    public static java.lang.Object parseWithException(java.lang.String)
+    public static void writeJSONString(java.lang.Object,java.io.Writer)
+org.json.simple.parser.ContentHandler
+org.json.simple.parser.JSONParser:
+    public static final int S_INIT
+    public static final int S_IN_FINISHED_VALUE
+    public static final int S_IN_OBJECT
+    public static final int S_IN_ARRAY
+    public static final int S_PASSED_PAIR_KEY
+    public static final int S_IN_PAIR_VALUE
+    public static final int S_END
+    public static final int S_IN_ERROR
+    public java.lang.Object parse(java.lang.String)
+    public java.lang.Object parse(java.lang.String,org.json.simple.parser.ContainerFactory)
+    public void parse(java.lang.String,org.json.simple.parser.ContentHandler)
+    public void parse(java.lang.String,org.json.simple.parser.ContentHandler,boolean)
+    public void parse(java.io.Reader,org.json.simple.parser.ContentHandler)
+    public void parse(java.io.Reader,org.json.simple.parser.ContentHandler,boolean)
+org.json.simple.parser.ParseException:
+    private static final long serialVersionUID
+    public static final int ERROR_UNEXPECTED_CHAR
+    public static final int ERROR_UNEXPECTED_TOKEN
+    public static final int ERROR_UNEXPECTED_EXCEPTION
+    public ParseException(int)
+    public ParseException(int,java.lang.Object)
+    public int getErrorType()
+    public void setErrorType(int)
+    public int getPosition()
+    public void setPosition(int)
+    public java.lang.Object getUnexpectedObject()
+    public void setUnexpectedObject(java.lang.Object)
+org.json.simple.parser.Yylex:
+    public static final int YYEOF
+    private static final int ZZ_BUFFERSIZE
+    public static final int YYINITIAL
+    public static final int STRING_BEGIN
+    private static final java.lang.String ZZ_CMAP_PACKED
+    private static final java.lang.String ZZ_ACTION_PACKED_0
+    private static final java.lang.String ZZ_ROWMAP_PACKED_0
+    private static final int ZZ_UNKNOWN_ERROR
+    private static final int ZZ_NO_MATCH
+    private static final int ZZ_PUSHBACK_2BIG
+    private static final java.lang.String ZZ_ATTRIBUTE_PACKED_0
+    Yylex(java.io.InputStream)
+    public final void yyclose()
+    public final int yystate()
+    public final int yylength()
+    public void yypushback(int)
+org.json.simple.parser.Yytoken:
+    public static final int TYPE_VALUE
+    public static final int TYPE_LEFT_BRACE
+    public static final int TYPE_RIGHT_BRACE
+    public static final int TYPE_LEFT_SQUARE
+    public static final int TYPE_RIGHT_SQUARE
+    public static final int TYPE_COMMA
+    public static final int TYPE_COLON
+    public static final int TYPE_EOF
+org.xeustechnologies.jtar.Octal:
+    24:24:public Octal()
+    78:99:public static int getOctalBytes(long,byte[],int,int)
+    115:118:public static int getCheckSumOctalBytes(long,byte[],int,int)
+    135:138:public static int getLongOctalBytes(long,byte[],int,int)
+org.xeustechnologies.jtar.TarConstants
+org.xeustechnologies.jtar.TarEntry:
+    37:40:public TarEntry(java.io.File,java.lang.String)
+    48:48:public boolean equals(org.xeustechnologies.jtar.TarEntry)
+    52:52:public boolean isDescendent(org.xeustechnologies.jtar.TarEntry)
+    56:56:public org.xeustechnologies.jtar.TarHeader getHeader()
+    64:65:public void setName(java.lang.String)
+    68:68:public int getUserId()
+    72:73:public void setUserId(int)
+    76:76:public int getGroupId()
+    80:81:public void setGroupId(int)
+    84:84:public java.lang.String getUserName()
+    88:89:public void setUserName(java.lang.String)
+    92:92:public java.lang.String getGroupName()
+    96:97:public void setGroupName(java.lang.String)
+    100:102:public void setIds(int,int)
+    105:106:public void setModTime(long)
+    109:110:public void setModTime(java.util.Date)
+    113:113:public java.util.Date getModTime()
+    117:117:public java.io.File getFile()
+    125:126:public void setSize(long)
+    154:180:public void extractTarHeader(java.lang.String)
+    189:195:public long computeCheckSum(byte[])
+    204:235:public void writeEntryHeader(byte[])
+org.xeustechnologies.jtar.TarHeader:
+    public static final int NAMELEN
+    public static final int MODELEN
+    public static final int UIDLEN
+    public static final int GIDLEN
+    public static final int SIZELEN
+    public static final int MODTIMELEN
+    public static final int CHKSUMLEN
+    public static final byte LF_OLDNORM
+    public static final byte LF_NORMAL
+    public static final byte LF_LINK
+    public static final byte LF_SYMLINK
+    public static final byte LF_CHR
+    public static final byte LF_BLK
+    public static final byte LF_DIR
+    public static final byte LF_FIFO
+    public static final byte LF_CONTIG
+    public static final int MAGICLEN
+    public static final java.lang.String TMAGIC
+    public static final java.lang.String GNU_TMAGIC
+    public static final int UNAMELEN
+    public static final int GNAMELEN
+    public static final int DEVLEN
+    186:194:public static int getNameBytes(java.lang.StringBuffer,byte[],int,int)
+org.xeustechnologies.jtar.TarInputStream:
+    private static final int SKIP_BUFFER_SIZE
+org.xeustechnologies.jtar.TarOutputStream
+org.xeustechnologies.jtar.TarUtils
