@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BlueCheese</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="Welcome_to_Blue_Cheese">Welcome to Blue Cheese!</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="cancel">Cancel</string>
+    
+    <!-- Profile View  -->
+    <string name="ID_field">ID: </string>
+    <string name="JoinedTime_field">Joined Time: </string>
+    <string name="Username_field">Username: </string>
+    
+    <!-- Button Text -->
+    <string name="SAVE">Save</string>
+    <string name="EDIT">Edit</string>
+
+</resources>
