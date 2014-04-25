@@ -24,13 +24,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class LoginActivity extends Activity {
-	EditText emailField;
-	EditText passwordField;
-	Button loginInButton;
-	Button cancelButton;
-	JSONObject result = null;
-	Client client = null;
-	Context context;
+	private EditText emailField;
+	private EditText passwordField;
+	private Button loginButton;
+	private Button cancelButton;
+	private JSONObject result = null;
+	private Client client = null;
+	private Context context;
 	
 	private Handler mHandler = new Handler() {
 
@@ -38,44 +38,13 @@ public class LoginActivity extends Activity {
 		public void handleMessage(Message msg) {
 			// TODO Auto-generated method stub
 			switch(msg.what) {
-			case Global.MSG_INFO_SUCCESS:
+			case Global.MSG_SUCCESS:
 				try {
 					if ( result.getBoolean("status") == true ) {
-						
-						SharedPreferences settings = getSharedPreferences(Global.PREFS_NAME, 0);
-					    SharedPreferences.Editor editor = settings.edit();
-					    
-					    Object selfie_raw;
-						try {
-						if( ( selfie_raw =  result.get("uselfie") ) != JSONObject.NULL ) {
-								//deleteFile(Global.SELFIE_TEMP);// for demo
-								FileOutputStream fos = openFileOutput(Global.SELFIE_TEMP, Context.MODE_PRIVATE);
-								JSONArray jsa = (JSONArray) selfie_raw;
-								byte[] byteArray = new byte[jsa.length()];
-								for ( int i = 0; i < byteArray.length; i++ ) {
-									byteArray[i] = Byte.parseByte(jsa.getString(i));
-								}
-								fos.write( byteArray );
-								fos.close();
-							} else { 
-								deleteFile(Global.SELFIE_TEMP);
-							}
-						    	
-						} catch (FileNotFoundException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						} catch (IOException e) {
-							e.printStackTrace();
-						}
-
-					    editor.putString(Global.PREF_KEY_ID, result.getString("uid"));
-					    editor.putString(Global.PREF_KEY_USERNAME, result.getString("uname"));
-					    editor.putString(Global.PREF_KEY_JOINTIME, result.getString("ucreate_time"));
-					    editor.putInt(Global.PREF_KEY_USERTYPE, result.getInt("utype"));
-					    editor.commit();
+					    cacheSelfie();
+					    cacheInfo();
 					    Intent goToProfile = new Intent(context, ProfileActivity.class);
 						startActivity( goToProfile );
-					
 					} else {
 						Toast.makeText(getApplicationContext(), result.getString("log"), Toast.LENGTH_LONG).show();
 					}
@@ -90,7 +59,6 @@ public class LoginActivity extends Activity {
 			}
 			super.handleMessage(msg);
 		}
-    	
     };
     
 	protected void onCreate(Bundle savedInstanceState) {
@@ -99,16 +67,15 @@ public class LoginActivity extends Activity {
 		emailField = (EditText) findViewById(R.id.username);
 		passwordField = (EditText) findViewById(R.id.password);
 		
-		loginInButton = (Button) findViewById(R.id.login_button);
+		loginButton = (Button) findViewById(R.id.login_button);
 		cancelButton = (Button) findViewById(R.id.cancel_button);
 		client = new Client();
 		context = this;
-		loginInButton.setOnClickListener(new View.OnClickListener() {
+		loginButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				// pass info as Json to database
 				new Thread(new Runnable() {
 					
 					public void run() {
@@ -121,7 +88,7 @@ public class LoginActivity extends Activity {
 							result = client.login( new_user );
 							
 							if ( result != null ) {
-								mHandler.obtainMessage( Global.MSG_INFO_SUCCESS ).sendToTarget();
+								mHandler.obtainMessage( Global.MSG_SUCCESS ).sendToTarget();
 							} else {
 								mHandler.obtainMessage( Global.MSG_FAILURE ).sendToTarget();
 							}
@@ -129,8 +96,6 @@ public class LoginActivity extends Activity {
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
-							
-						
 						} 
 					}
 				}).start();  
@@ -145,7 +110,40 @@ public class LoginActivity extends Activity {
 				finish();
 			}
 		});
-		
+	}
+	
+	private void cacheSelfie(){
+		Object selfie_raw;
+		try {
+		if( ( selfie_raw =  result.get("uselfie") ) != JSONObject.NULL ) {
+				FileOutputStream fos = openFileOutput(Global.SELFIE_TEMP, Context.MODE_PRIVATE);
+				JSONArray jsa = (JSONArray) selfie_raw;
+				byte[] byteArray = new byte[jsa.length()];
+				for ( int i = 0; i < byteArray.length; i++ ) {
+					byteArray[i] = Byte.parseByte(jsa.getString(i));
+				}
+				fos.write( byteArray );
+				fos.close();
+			} else { 
+				deleteFile(Global.SELFIE_TEMP);
+			}
+		    	
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private void cacheInfo() throws JSONException{
+		SharedPreferences settings = getSharedPreferences(Global.PREFS_NAME, 0);
+	    SharedPreferences.Editor editor = settings.edit();
+	    editor.putString(Global.PREF_KEY_ID, result.getString("uid"));
+	    editor.putString(Global.PREF_KEY_USERNAME, result.getString("uname"));
+	    editor.putString(Global.PREF_KEY_JOINTIME, result.getString("ucreate_time"));
+	    editor.putInt(Global.PREF_KEY_USERTYPE, result.getInt("utype"));
+	    editor.commit();
 	}
 
 }

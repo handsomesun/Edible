@@ -4,14 +4,6 @@
     android:alpha="50"
     android:orientation="vertical" >
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:background="#FFFFBB33"
-        android:contentDescription="@string/app_name"
-        android:scaleType="center"
-        android:src="@drawable/blue_cheese" />
-
     <EditText
         android:id="@+id/emailField"
         android:layout_width="250dp"

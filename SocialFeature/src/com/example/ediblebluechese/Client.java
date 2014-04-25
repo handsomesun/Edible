@@ -94,9 +94,6 @@ public class Client {
 			pw.flush();
 			pw.close();
 			writer.close();
-//			
-//			writer.write(usr.toString().getBytes()); // ?
-//			writer.flush();
 			
 			reader = new BufferedReader( new InputStreamReader( connection.getInputStream()));
 			
@@ -122,9 +119,7 @@ public class Client {
 					reader.close();
 				if (connection != null)
 					connection.disconnect();
-				
-//				connection.disconnect();
-			} catch (IOException e) {
+				} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}

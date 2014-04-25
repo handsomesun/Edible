@@ -55,8 +55,6 @@ public class ProfileActivity extends Activity {
 	private TextView createTimeView;
 	
 	private Button editButton;
-	private Button discoverButton;
-	private Context context;
 	private JSONObject result;
 	private Client client;
 	
@@ -73,7 +71,6 @@ public class ProfileActivity extends Activity {
 				new_user.put("uid", prefs.getString(Global.PREF_KEY_ID, "null"));		
 				new_user.put("old_uname", prefs.getString(Global.PREF_KEY_USERNAME, "null"));
 				new_user.put("new_uname", usernameView.getText().toString());
-				
 				
 				result = client.updateInfo( new_user );
 				
@@ -181,7 +178,6 @@ Thread updateSelfie = new Thread(new Runnable() {
 
 		createTimeView = (TextView) findViewById(R.id.create_time_view);
 		editButton = (Button) findViewById(R.id.edit_button);
-		context = this;
 		client = new Client();
 		/* Select Image */
 		final String [] items			= new String [] {"Take from camera", "Select from gallery"};				
@@ -238,8 +234,6 @@ Thread updateSelfie = new Thread(new Runnable() {
 				}
 			}
 		});
-		discoverButton = (Button) findViewById(R.id.discover_button);
-		// TODO OnClick
 	}
 	
 	@Override
@@ -293,9 +287,7 @@ Thread updateSelfie = new Thread(new Runnable() {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {  
         if (resultCode == NONE)  
             return;  
-        // æ‹ç…§  
         if (requestCode == PHOTOHRAPH) {  
-            //è®¾ç½®æ–‡ä»¶ä¿å­˜è·¯å¾„è¿™é‡Œæ”¾åœ¨è·Ÿç›®å½•ä¸‹  
             File picture = new File(Environment.getExternalStorageDirectory() + "/temp.jpg");  
             startPhotoZoom(Uri.fromFile(picture));  
         }  
@@ -303,11 +295,9 @@ Thread updateSelfie = new Thread(new Runnable() {
         if (data == null)  
             return;  
           
-        // è¯»å–ç›¸å†Œç¼©æ”¾å›¾ç‰‡  
         if (requestCode == PHOTOZOOM) {  
             startPhotoZoom(data.getData());  
         }  
-        // å¤„ç†ç»“æžœ  
         if (requestCode == PHOTORESOULT) {  
             Bundle extras = data.getExtras();  
             if (extras != null) {  
@@ -319,9 +309,7 @@ Thread updateSelfie = new Thread(new Runnable() {
             }  
   
         }  
-
-  
-        //super.onActivityResult(requestCode, resultCode, data);  
+       super.onActivityResult(requestCode, resultCode, data);  
     }  
   
     public void startPhotoZoom(Uri uri) {  
@@ -331,8 +319,8 @@ Thread updateSelfie = new Thread(new Runnable() {
         intent.putExtra("scale", true);
         intent.putExtra("aspectX", 1);  
         intent.putExtra("aspectY", 1);  
-        intent.putExtra("outputX", 150);  
-        intent.putExtra("outputY", 150);  
+        intent.putExtra("outputX", 120);  
+        intent.putExtra("outputY", 120);  
         intent.putExtra("return-data", true);  
         startActivityForResult(intent, PHOTORESOULT);  
     }  
