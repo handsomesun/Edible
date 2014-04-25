@@ -4,7 +4,7 @@ import java.io.File;
 
 import android.net.Uri;
 import android.os.Environment;
-
+//hasdhaskjdashdkjas
 public class Global {
 	/* POST action enum */
 	public static final int SIGNUP = 0;
