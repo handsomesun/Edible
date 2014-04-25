@@ -4,7 +4,8 @@
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
-	<classpathentry kind="lib" path="libs/httpclientandroidlib-1.2.1.jar"/>
-	<classpathentry kind="lib" path="C:/Eclipse/adt-bundle-windows-x86_64-20130917/sdk/extras/android/support/v13/android-support-v13.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/httpclientandroidlib-1.2.1.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="lib" path="C:/Users/Junyang/Desktop/Git/GIthub/Edible/SocialFeature/libs/android-support-v13.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
