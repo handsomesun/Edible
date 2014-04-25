@@ -270,33 +270,6 @@ Thread updateSelfie = new Thread(new Runnable() {
 		usernameView.setText(prefs.getString(Global.PREF_KEY_USERNAME, "null"));
 		createTimeView.setText(prefs.getString(Global.PREF_KEY_JOINTIME, "null"));
 	}
-	/*
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-	    if (resultCode != RESULT_OK) return;
-	   
-	    switch (requestCode) {
-		    case PICK_FROM_CAMERA:
-		    	doCrop();
-		    	break;
-		    case PICK_FROM_FILE: 
-		    	mImageCaptureUri = data.getData();
-		    	doCrop();
-		    	break;	    	
-		    case CROP_FROM_CAMERA:	    	
-		        Bundle extras = data.getExtras();
-		        if (extras != null) {	        	
-		            Bitmap photo = extras.getParcelable("data");
-		            
-		            selfieView.setImageBitmap(photo);
-		            cacheSelfie( photo );
-		        }
-		        File f = new File(mImageCaptureUri.getPath());            
-		        if (f.exists()) f.delete();
-		        break;
-
-	    }
-	}
-	*/
 	
 	private void cacheSelfie( Bitmap photo ){
 		FileOutputStream fos;
@@ -358,8 +331,8 @@ Thread updateSelfie = new Thread(new Runnable() {
         intent.putExtra("scale", true);
         intent.putExtra("aspectX", 1);  
         intent.putExtra("aspectY", 1);  
-        intent.putExtra("outputX", 180);  
-        intent.putExtra("outputY", 180);  
+        intent.putExtra("outputX", 150);  
+        intent.putExtra("outputY", 150);  
         intent.putExtra("return-data", true);  
         startActivityForResult(intent, PHOTORESOULT);  
     }  
