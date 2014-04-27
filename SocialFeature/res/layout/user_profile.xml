@@ -1,79 +1,252 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+<?xml version="1.0" encoding="utf-8"?>  
 
-    <TableRow>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
 
-    <ImageView
-        android:id="@+id/selfie_view"
-        android:layout_gravity="center"
-        android:background="@drawable/default_user"
-        android:height="150dp"
-        android:scaleType="fitCenter"
-        android:width="150dp" />
-    
-    <LinearLayout android:orientation="vertical"
-        		  android:paddingLeft="10dp">
-    
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ID_field"
-        android:textSize="20dp" />
-    
-    <TextView
-            android:id="@+id/id_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="20dp" />
-    
-    <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/JoinedTime_field"
-            android:textSize="20dp" />
+    android:layout_width="match_parent"  
 
-        <TextView
-            android:id="@+id/create_time_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="20dp" />
-    
-     </LinearLayout>
-    
-    </TableRow>
-    
+    android:layout_height="match_parent"  
 
-    <TableRow>
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Username_field"
-            android:textSize="20dp" />
-    </TableRow>
-    
-    <TableRow>
-        <EditText
-            android:id="@+id/username_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="20dp"/>
+    android:background="#ffffff"  
+
+    android:orientation="vertical" >  
+
+    <FrameLayout   
+
+        android:orientation="vertical"  
+
+        android:layout_width="fill_parent"  
+
+        android:layout_height="wrap_content"  
+
+        android:background="#00BFFF">  
+
+        <LinearLayout   
+
+            android:orientation="horizontal"  
+
+            android:layout_width="fill_parent"  
+
+            android:layout_height="wrap_content"  
+
+            android:layout_gravity="top"  
+
+            android:layout_marginTop="30dip">  
+
+            <FrameLayout   
+
+                android:layout_width="120.0dip"   
+
+                android:layout_height="120.0dip"  
+
+                android:layout_marginLeft="15dip">    
+
+                <ImageView   
+
+                    android:id="@+id/selfie_view"
+
+                    android:layout_width="fill_parent"   
+
+                    android:layout_height="fill_parent"   
+
+                    android:background="@drawable/default_user" />  
+
+            </FrameLayout>  
+
+            <LinearLayout   
+
+                android:layout_width="wrap_content"  
+
+                android:layout_height="wrap_content"  
+
+                android:layout_marginLeft="15dip"  
+
+                android:layout_marginTop="10dip"  
+
+                android:orientation="vertical"  
+
+                android:gravity="center_horizontal">  
+
+                <EditText  
+
+                    android:id="@+id/username_view" 
+
+                    android:layout_width="wrap_content"  
+
+                    android:layout_height="wrap_content"  
+
+                    android:textColor="#ffffff"  
+
+                    android:layout_marginTop="5dip"  
+
+                    android:textSize="20sp"  
+
+                     
+
+                    
+
+                   />  
+
+                  
+
+            </LinearLayout>  
+
+              
+
+              
+
+        </LinearLayout>  
+
+  
+
         
-    </TableRow>
 
-    <Button
-        android:id="@+id/edit_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Edit" />
+    </FrameLayout>  
 
-</TableLayout>
+      
+
+    <LinearLayout   
+
+                android:layout_width="fill_parent"  
+
+                android:layout_height="wrap_content"  
+
+                android:layout_marginLeft="15dip"  
+
+                 android:layout_marginRight="15dip"  
+
+                android:layout_marginTop="16dip"  
+
+                 android:gravity="center_vertical"  
+
+                android:orientation="horizontal"  
+
+                
+
+                android:background="#FFFFFF">  
+
+                <TextView   
+
+                     
+
+                    android:layout_width="wrap_content"  
+
+                    android:layout_height="wrap_content"  
+
+                    android:textColor="#000000"  
+
+                    android:layout_marginLeft="15dip"  
+
+                     android:textSize="15sp"  
+
+                    android:text="@string/email"/>  
+
+                <TextView   
+
+                    android:id="@+id/id_view"
+
+                    android:layout_width="wrap_content"  
+
+                    android:layout_height="wrap_content"  
+
+                    android:layout_marginLeft="20dip"  
+
+                    android:textColor="#000000"  
+
+                   android:textSize="15sp"  
+
+                      />  
+
+            </LinearLayout>
+
+              
+
+        <LinearLayout   
+
+                android:layout_width="fill_parent"  
+
+                android:layout_height="wrap_content"  
+
+                android:layout_marginLeft="15dip"  
+
+                 android:layout_marginRight="15dip"  
+
+                android:layout_marginTop="16dip"  
+
+                 android:gravity="center_vertical"  
+
+                android:orientation="horizontal"  
+
+                
+
+                android:background="#FFFFFF">  
+
+                <TextView   
+
+                     
+
+                    android:layout_width="wrap_content"  
+
+                    android:layout_height="wrap_content"  
+
+                    android:textColor="#000000"  
+
+                    android:layout_marginLeft="15dip"  
+
+                     android:textSize="15sp"  
+
+                    android:text="@string/JoinedTime_field"/>  
+
+                <TextView   
+
+                   android:id="@+id/create_time_view"
+
+                    android:layout_width="wrap_content"  
+
+                    android:layout_height="wrap_content"  
+
+                    android:layout_marginLeft="20dip"  
+
+                    android:textColor="#000000"  
+
+                   android:textSize="15sp"  
+
+                      />  
+
+            </LinearLayout>
+
+              
+
+    
+
+
+
+   
+
+              
+
+       <Button   
+
+           android:id="@+id/edit_button"
+
+                android:layout_width="fill_parent"  
+
+                android:layout_height="wrap_content"  
+
+                android:layout_marginLeft="15dip"  
+
+                android:layout_marginRight="15dip"  
+
+                android:layout_marginTop="16dip"  
+
+                android:gravity="center_vertical|center_horizontal" 
+                 
+
+                android:text="@string/EDIT"  
+
+                android:textSize="20sp"  
+
+                android:background="#00BFFF"></Button>  
+
+       
+
+</LinearLayout>  
