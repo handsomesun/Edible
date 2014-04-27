@@ -76,29 +76,33 @@ public class LoginActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				new Thread(new Runnable() {
+				if ( isInfoValid() ) {
+					new Thread(new Runnable() {
 					
-					public void run() {
-						// TODO Auto-generated method stub
-						try {
-							JSONObject new_user = new JSONObject();
-							new_user.put("uid", emailField.getText().toString());
-							new_user.put("upwd", passwordField.getText().toString());
+						public void run() {
+							// TODO Auto-generated method stub
+							try {
+								JSONObject new_user = new JSONObject();
+								new_user.put("uid", emailField.getText().toString());
+								new_user.put("upwd", passwordField.getText().toString());
 							
-							result = client.login( new_user );
+								result = client.login( new_user );
 							
-							if ( result != null ) {
-								mHandler.obtainMessage( Global.MSG_SUCCESS ).sendToTarget();
-							} else {
-								mHandler.obtainMessage( Global.MSG_FAILURE ).sendToTarget();
-							}
+								if ( result != null ) {
+									mHandler.obtainMessage( Global.MSG_SUCCESS ).sendToTarget();
+								} else {
+									mHandler.obtainMessage( Global.MSG_FAILURE ).sendToTarget();
+								}
 							
-						} catch (Exception e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						} 
-					}
-				}).start();  
+							} catch (Exception e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} 
+						}
+					}).start();  
+				} else {
+					Toast.makeText(context, "Please enter valid information.", Toast.LENGTH_SHORT);
+				}
 			}
 		});
 		
@@ -144,6 +148,11 @@ public class LoginActivity extends Activity {
 	    editor.putString(Global.PREF_KEY_JOINTIME, result.getString("ucreate_time"));
 	    editor.putInt(Global.PREF_KEY_USERTYPE, result.getInt("utype"));
 	    editor.commit();
+	}
+	
+	private boolean isInfoValid(){
+		// TODO
+		return true;
 	}
 
 }

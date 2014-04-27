@@ -59,64 +59,8 @@ public class ProfileActivity extends Activity {
 	private Client client;
 	
 	private Bitmap photo; // for recording the lasted chosen photo
-	
-	/* Update Thread */
-	Thread updateInfo = new Thread(new Runnable() {
-		
-		public void run() {
-			// TODO Auto-generated method stub
-			try {
-				SharedPreferences prefs = getSharedPreferences(Global.PREFS_NAME, 0);
-				JSONObject new_user = new JSONObject();
-				new_user.put("uid", prefs.getString(Global.PREF_KEY_ID, "null"));		
-				new_user.put("old_uname", prefs.getString(Global.PREF_KEY_USERNAME, "null"));
-				new_user.put("new_uname", usernameView.getText().toString());
-				
-				result = client.updateInfo( new_user );
-				
-				if ( result != null ) {
-					mHandler.obtainMessage(Global.MSG_INFO_SUCCESS).sendToTarget();
-				} else {
-					mHandler.obtainMessage(Global.MSG_FAILURE).sendToTarget();
-				}	
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} 
-		}
-	});
-	
-Thread updateSelfie = new Thread(new Runnable() {
-		
-		public void run() {
-			// TODO Auto-generated method stub
-			try {
-				SharedPreferences prefs = getSharedPreferences(Global.PREFS_NAME, 0);
-				JSONObject new_user = new JSONObject();
-				new_user.put("uid", prefs.getString(Global.PREF_KEY_ID, "null"));
-				ByteArrayOutputStream stream = new ByteArrayOutputStream();
-				photo.compress(Bitmap.CompressFormat.PNG, 100, stream);
-				
-				byte[] byteArray = stream.toByteArray();
-				JSONArray jsa = new JSONArray();
-				for ( byte b : byteArray ) {
-					jsa.put(b);
-				}
-				new_user.put("uselfie", jsa);
 
-				result = client.updateSelfie( new_user );
-				
-				if ( result != null ) {
-					mHandler.obtainMessage(Global.MSG_SELFIE_SUCCESS).sendToTarget();
-				} else {
-					mHandler.obtainMessage(Global.MSG_FAILURE).sendToTarget();
-				}	
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} 
-		}
-	});
+
 	
 	private Handler mHandler = new Handler() {
 
@@ -226,6 +170,30 @@ Thread updateSelfie = new Thread(new Runnable() {
 					editting = true;
 					editButton.setText(R.string.SAVE);
 				} else {
+					Thread updateInfo = new Thread(new Runnable() {
+						
+						public void run() {
+							// TODO Auto-generated method stub
+							try {
+								SharedPreferences prefs = getSharedPreferences(Global.PREFS_NAME, 0);
+								JSONObject new_user = new JSONObject();
+								new_user.put("uid", prefs.getString(Global.PREF_KEY_ID, "null"));		
+								new_user.put("old_uname", prefs.getString(Global.PREF_KEY_USERNAME, "null"));
+								new_user.put("new_uname", usernameView.getText().toString());
+								
+								result = client.updateInfo( new_user );
+								
+								if ( result != null ) {
+									mHandler.obtainMessage(Global.MSG_INFO_SUCCESS).sendToTarget();
+								} else {
+									mHandler.obtainMessage(Global.MSG_FAILURE).sendToTarget();
+								}	
+							} catch (Exception e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} 
+						}
+					});
 					updateInfo.start();
 					usernameView.setFocusableInTouchMode(false);
 					usernameView.setFocusable(false);
@@ -304,8 +272,38 @@ Thread updateSelfie = new Thread(new Runnable() {
                 photo = extras.getParcelable("data");    
                 //cacheSelfie( photo );
                 //updateUI();
+                Thread updateSelfie = new Thread(new Runnable() {
+            		
+            		public void run() {
+            			// TODO Auto-generated method stub
+            			try {
+            				SharedPreferences prefs = getSharedPreferences(Global.PREFS_NAME, 0);
+            				JSONObject new_user = new JSONObject();
+            				new_user.put("uid", prefs.getString(Global.PREF_KEY_ID, "null"));
+            				ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            				photo.compress(Bitmap.CompressFormat.PNG, 100, stream);
+            				
+            				byte[] byteArray = stream.toByteArray();
+            				JSONArray jsa = new JSONArray();
+            				for ( byte b : byteArray ) {
+            					jsa.put(b);
+            				}
+            				new_user.put("uselfie", jsa);
+
+            				result = client.updateSelfie( new_user );
+            				
+            				if ( result != null ) {
+            					mHandler.obtainMessage(Global.MSG_SELFIE_SUCCESS).sendToTarget();
+            				} else {
+            					mHandler.obtainMessage(Global.MSG_FAILURE).sendToTarget();
+            				}	
+            			} catch (Exception e) {
+            				// TODO Auto-generated catch block
+            				e.printStackTrace();
+            			} 
+            		}
+            	});
                 updateSelfie.start();
-                
             }  
   
         }  
