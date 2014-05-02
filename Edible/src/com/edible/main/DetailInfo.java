@@ -49,9 +49,8 @@ import android.widget.Toast;
 public class DetailInfo extends Activity {
 
 	private TextView chName, enName, background, category;
-	private TextView information, memo, editor, lattitude, longitude, date;
+	private TextView information, memo, editor, date;
 	private ImageView picture;
-	private ImageView pic;
 	private Bitmap bm; 
 	private ProgressBar circleProgressBar;
 	private Socket _socket = null;
@@ -76,6 +75,7 @@ public class DetailInfo extends Activity {
 			// TODO Auto-generated method stub
 			switch(msg.what) {
 			case MSG_SUCCESS:
+				
 				circleProgressBar.setVisibility(View.INVISIBLE);
 				setContentView(R.layout.detail_info);
 				chName = (TextView) findViewById(R.id.chName);
@@ -84,9 +84,13 @@ public class DetailInfo extends Activity {
 				category = (TextView) findViewById(R.id.category);
 				information = (TextView) findViewById(R.id.information);
 				picture = (ImageView) findViewById(R.id.picture);
+				
+				if(result.get("imgID") == null) 
+					Toast.makeText(getApplicationContext(), "No Photos", Toast.LENGTH_LONG).show();
+				
 				Card card = (Card) result.get("card");
 				ArrayList<Long> imgID =  (ArrayList<Long>) result.get("imgID");
-				Console dataManager = new Console();
+				CardConsole dataManager = new CardConsole();
 				byte[] rawImg = (byte[]) dataManager.getPhotoById(imgID.get(0)).get("pData");
 				if ( card.cn != null)
 					chName.setText(card.cn);
@@ -101,12 +105,10 @@ public class DetailInfo extends Activity {
 				
 				Bitmap bMap = BitmapFactory.decodeByteArray(rawImg, 0, rawImg.length);
 	            picture.setImageBitmap(bMap);
-				//bm = BitmapFactory.decodeFile(filePath);
-				//pic.setImageBitmap(bm);
 				break;
 			case MSG_FAILURE:
 				circleProgressBar.setVisibility(View.INVISIBLE);
-				Toast.makeText(getApplicationContext(), "Network unavailable", Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(), "Network unavailable or card does not exist", Toast.LENGTH_LONG).show();
 				break;
 			}
 			super.handleMessage(msg);
@@ -122,26 +124,21 @@ public class DetailInfo extends Activity {
         circleProgressBar = (ProgressBar) findViewById(R.id.circleProgressBar);
         circleProgressBar.setIndeterminate(true);
         circleProgressBar.setVisibility(View.VISIBLE);
+        
+        
         new Thread(new Runnable() {
 			
 			public void run() {
 				// TODO Auto-generated method stub
 				try {
 					String request = intent.getStringExtra("request");
-					Console dataManager = new Console();
+					CardConsole dataManager = new CardConsole();
 					HashMap hm = dataManager.getSingleData(request);
 					
 					if(hm == null) {
-						Toast.makeText(getApplicationContext(), "Discover!", Toast.LENGTH_LONG).show();
 						mHandler.obtainMessage(MSG_FAILURE).sendToTarget();
 					} else {
 						result = hm;
-						System.out.println(((Card)hm.get("card")).toString());
-						if(hm.get("imgID") == null) 
-							Toast.makeText(getApplicationContext(), "No Photos", Toast.LENGTH_LONG).show();
-						else {
-							System.out.println(hm.get("imgID").toString());
-						}
 						mHandler.obtainMessage(MSG_SUCCESS).sendToTarget();
 					}
 						

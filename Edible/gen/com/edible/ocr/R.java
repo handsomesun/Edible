@@ -115,7 +115,6 @@ public final class R {
         public static final int xiangji=0x7f02000f;
     }
     public static final class id {
-        public static final int IP_View=0x7f08002a;
         public static final int about_button=0x7f08001b;
         public static final int background=0x7f080020;
         public static final int camera_button_view=0x7f080017;
@@ -129,11 +128,10 @@ public final class R {
         public static final int enName=0x7f08001f;
         public static final int get_text_button=0x7f080015;
         public static final int help_contents=0x7f080025;
-        public static final int imageView1=0x7f08002c;
+        public static final int imageView1=0x7f080028;
         public static final int image_view=0x7f08000e;
         public static final int indeterminate_progress_indicator_view=0x7f080016;
         public static final int information=0x7f080022;
-        public static final int main_activity=0x7f080027;
         public static final int ocr_continuous_decode=0x7f080003;
         public static final int ocr_continuous_decode_failed=0x7f080004;
         public static final int ocr_continuous_decode_succeeded=0x7f080005;
@@ -141,13 +139,11 @@ public final class R {
         public static final int ocr_decode_failed=0x7f080007;
         public static final int ocr_decode_succeeded=0x7f080008;
         public static final int ocr_result_text_view=0x7f080013;
-        public static final int open_camera=0x7f080028;
         public static final int picture=0x7f080023;
         public static final int preview_view=0x7f08000b;
         public static final int progress_small=0x01010000;
         public static final int quit=0x7f080009;
         public static final int restart_preview=0x7f08000a;
-        public static final int resultView=0x7f080029;
         public static final int result_view=0x7f08000d;
         public static final int setting_button=0x7f08001a;
         public static final int shutter_button=0x7f080019;
@@ -155,8 +151,8 @@ public final class R {
         public static final int source_language_text_view_label=0x7f08000f;
         public static final int status_view_bottom=0x7f08001d;
         public static final int status_view_top=0x7f080018;
-        public static final int textView1=0x7f08002d;
-        public static final int textView2=0x7f08002b;
+        public static final int textView1=0x7f080029;
+        public static final int textView2=0x7f080027;
         public static final int translation_language_label_text_view=0x7f080011;
         public static final int translation_language_text_view=0x7f080012;
         public static final int translation_text_view=0x7f080014;
@@ -168,8 +164,7 @@ public final class R {
         public static final int detail_info=0x7f030001;
         public static final int detail_info_before=0x7f030002;
         public static final int help=0x7f030003;
-        public static final int main_activity=0x7f030004;
-        public static final int welcome=0x7f030005;
+        public static final int welcome=0x7f030004;
     }
     public static final class raw {
         public static final int beep=0x7f050000;

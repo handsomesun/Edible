@@ -18,7 +18,6 @@
 package com.edible.ocr;
 
 
-import com.edible.ocr.BeepManager;
 import com.googlecode.leptonica.android.ReadFile;
 import com.googlecode.tesseract.android.TessBaseAPI;
 
@@ -40,7 +39,6 @@ public final class DecodeHandler extends Handler {
   private final CaptureActivity activity;
   private boolean running = true;
   private final TessBaseAPI baseApi;
-  private BeepManager beepManager;
   private Bitmap bitmap;
   private static boolean isDecodePending;
   private long timeRequired;
@@ -48,8 +46,6 @@ public final class DecodeHandler extends Handler {
   DecodeHandler(CaptureActivity activity) {
     this.activity = activity;
     baseApi = activity.getBaseApi();
-    beepManager = new BeepManager(activity);
-    beepManager.updatePrefs();
   }
 
   @Override
@@ -87,7 +83,6 @@ public final class DecodeHandler extends Handler {
    * @param height Image height
    */
   private void ocrDecode(byte[] data, int width, int height) {
-    beepManager.playBeepSoundAndVibrate();
     activity.displayProgressDialog();
     
     // Launch OCR asynchronously, so we get the dialog box displayed immediately
