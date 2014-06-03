@@ -885,23 +885,30 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
   }
   
   private String stripNoise(String text) {
-	// TODO Auto-generated method stub
-	StringBuffer sb = new StringBuffer();
-	for ( int i = 0; i < text.length(); i++ ) {
-		if ( i == 0 || i == text.length() - 1 ) {
-			if ( ( text.charAt( i ) >= 65 && text.charAt( i ) <= 90 ) || ( text.charAt( i ) >= 97 && text.charAt( i ) <= 122 ) )
+		// TODO Auto-generated method stub
+		StringBuffer sb = new StringBuffer();
+		for ( int i = 0; i < text.length(); i++ ) {
+			if ( ( text.charAt( i ) >= 65 && text.charAt( i ) <= 90 ) || ( text.charAt( i ) >= 97 && text.charAt( i ) <= 122 ) || text.charAt( i ) == ' ')
 				sb.append( text.charAt( i ) );
-		} else {
-			if ( text.charAt( i ) == ' ' ) {
-				if ( text.charAt( i - 1 ) != ' ' ) sb.append( text.charAt( i ) );
-			} else if ( ( text.charAt( i ) >= 65 && text.charAt( i ) <= 90 ) || ( text.charAt( i ) >= 97 && text.charAt( i ) <= 122 ) ) {
-				sb.append( text.charAt( i ) );
+		}
+		text = sb.toString();
+		sb = new StringBuffer();
+		
+		for ( int i = 0; i < text.length(); i++ ) {
+			if ( i == 0 || i == text.length() - 1 ) {
+				if ( ( text.charAt( i ) >= 65 && text.charAt( i ) <= 90 ) || ( text.charAt( i ) >= 97 && text.charAt( i ) <= 122 ) )
+					sb.append( text.charAt( i ) );
+			} else {
+				if ( text.charAt( i ) == ' ' ) {
+					if ( text.charAt( i - 1 ) != ' ' ) sb.append( text.charAt( i ) );
+				} else if ( ( text.charAt( i ) >= 65 && text.charAt( i ) <= 90 ) || ( text.charAt( i ) >= 97 && text.charAt( i ) <= 122 ) ) {
+					sb.append( text.charAt( i ) );
+				}
 			}
 		}
+		
+		return sb.toString();
 	}
-	
-	return sb.toString();
-}
 
 /**
    * Displays information relating to the results of a successful real-time OCR request.

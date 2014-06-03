@@ -106,7 +106,7 @@ public final class CameraManager {
    * Closes the camera driver if still in use.
    */
   public synchronized void closeDriver() {
-    if (camera != null) {
+     if (camera != null) {
       camera.release();
       camera = null;
 

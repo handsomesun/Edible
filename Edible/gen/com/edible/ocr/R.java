@@ -96,6 +96,14 @@ public final class R {
         public static final int white=0x7f07000b;
         public static final int yellow=0x7f07000c;
     }
+    public static final class dimen {
+        /** 
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
+    
+         */
+        public static final int activity_horizontal_margin=0x7f080000;
+    }
     public static final class drawable {
         public static final int about=0x7f020000;
         public static final int about_button=0x7f020001;
@@ -115,49 +123,49 @@ public final class R {
         public static final int xiangji=0x7f02000f;
     }
     public static final class id {
-        public static final int about_button=0x7f08001b;
-        public static final int background=0x7f080020;
-        public static final int camera_button_view=0x7f080017;
-        public static final int category=0x7f080021;
-        public static final int chName=0x7f08001e;
-        public static final int circleProgressBar=0x7f080024;
-        public static final int decode=0x7f080000;
-        public static final int decode_failed=0x7f080001;
-        public static final int decode_succeeded=0x7f080002;
-        public static final int done_button=0x7f080026;
-        public static final int enName=0x7f08001f;
-        public static final int get_text_button=0x7f080015;
-        public static final int help_contents=0x7f080025;
-        public static final int imageView1=0x7f080028;
-        public static final int image_view=0x7f08000e;
-        public static final int indeterminate_progress_indicator_view=0x7f080016;
-        public static final int information=0x7f080022;
-        public static final int ocr_continuous_decode=0x7f080003;
-        public static final int ocr_continuous_decode_failed=0x7f080004;
-        public static final int ocr_continuous_decode_succeeded=0x7f080005;
-        public static final int ocr_decode=0x7f080006;
-        public static final int ocr_decode_failed=0x7f080007;
-        public static final int ocr_decode_succeeded=0x7f080008;
-        public static final int ocr_result_text_view=0x7f080013;
-        public static final int picture=0x7f080023;
-        public static final int preview_view=0x7f08000b;
+        public static final int about_button=0x7f09001b;
+        public static final int background=0x7f090020;
+        public static final int camera_button_view=0x7f090017;
+        public static final int category=0x7f090021;
+        public static final int chName=0x7f09001e;
+        public static final int circleProgressBar=0x7f090024;
+        public static final int decode=0x7f090000;
+        public static final int decode_failed=0x7f090001;
+        public static final int decode_succeeded=0x7f090002;
+        public static final int done_button=0x7f090026;
+        public static final int enName=0x7f09001f;
+        public static final int get_text_button=0x7f090015;
+        public static final int help_contents=0x7f090025;
+        public static final int imageView1=0x7f090028;
+        public static final int image_view=0x7f09000e;
+        public static final int indeterminate_progress_indicator_view=0x7f090016;
+        public static final int information=0x7f090022;
+        public static final int ocr_continuous_decode=0x7f090003;
+        public static final int ocr_continuous_decode_failed=0x7f090004;
+        public static final int ocr_continuous_decode_succeeded=0x7f090005;
+        public static final int ocr_decode=0x7f090006;
+        public static final int ocr_decode_failed=0x7f090007;
+        public static final int ocr_decode_succeeded=0x7f090008;
+        public static final int ocr_result_text_view=0x7f090013;
+        public static final int picture=0x7f090023;
+        public static final int preview_view=0x7f09000b;
         public static final int progress_small=0x01010000;
-        public static final int quit=0x7f080009;
-        public static final int restart_preview=0x7f08000a;
-        public static final int result_view=0x7f08000d;
-        public static final int setting_button=0x7f08001a;
-        public static final int shutter_button=0x7f080019;
-        public static final int source_language_text_view=0x7f080010;
-        public static final int source_language_text_view_label=0x7f08000f;
-        public static final int status_view_bottom=0x7f08001d;
-        public static final int status_view_top=0x7f080018;
-        public static final int textView1=0x7f080029;
-        public static final int textView2=0x7f080027;
-        public static final int translation_language_label_text_view=0x7f080011;
-        public static final int translation_language_text_view=0x7f080012;
-        public static final int translation_text_view=0x7f080014;
-        public static final int typed_result=0x7f08001c;
-        public static final int viewfinder_view=0x7f08000c;
+        public static final int quit=0x7f090009;
+        public static final int restart_preview=0x7f09000a;
+        public static final int result_view=0x7f09000d;
+        public static final int setting_button=0x7f09001a;
+        public static final int shutter_button=0x7f090019;
+        public static final int source_language_text_view=0x7f090010;
+        public static final int source_language_text_view_label=0x7f09000f;
+        public static final int status_view_bottom=0x7f09001d;
+        public static final int status_view_top=0x7f090018;
+        public static final int textView1=0x7f090029;
+        public static final int textView2=0x7f090027;
+        public static final int translation_language_label_text_view=0x7f090011;
+        public static final int translation_language_text_view=0x7f090012;
+        public static final int translation_text_view=0x7f090014;
+        public static final int typed_result=0x7f09001c;
+        public static final int viewfinder_view=0x7f09000c;
     }
     public static final class layout {
         public static final int capture=0x7f030000;
@@ -170,7 +178,7 @@ public final class R {
         public static final int beep=0x7f050000;
     }
     public static final class string {
-        public static final int app_name=0x7f090000;
+        public static final int app_name=0x7f0a0000;
     }
     public static final class xml {
         public static final int preferences=0x7f040000;
